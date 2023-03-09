@@ -24,7 +24,7 @@ const ItemDetails = () => {
     }
 
     const getItem = async () => {
-        const item = await fetch(`http://localhost:1337/api/items/${itemId}?populate=image`, { method: "GET"});
+        const item = await fetch(`https://e-commerce-server-ioqu.onrender.com/api/items/${itemId}?populate=image`, { method: "GET"});
         const itemJson = await item.json();
         console.log(itemJson)
         setItem(itemJson.data)
@@ -32,7 +32,7 @@ const ItemDetails = () => {
     
     async function getItems(){
         const items = await fetch(
-            "http://localhost:1337/api/items?populate=image",
+            "https://e-commerce-server-ioqu.onrender.com/api/items?populate=image",
             {method: "GET"}
         );
         const itemsJson = await items.json()
@@ -56,7 +56,7 @@ const ItemDetails = () => {
                     alt={item?.name}
                     width="100%"
                     height="100%"
-                    src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                    src={`https://e-commerce-server-ioqu.onrender.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                 />
             </Box>
 
