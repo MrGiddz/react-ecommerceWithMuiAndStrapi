@@ -56,7 +56,7 @@ const ItemDetails = () => {
                     alt={item?.name}
                     width="100%"
                     height="100%"
-                    src={`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                    src={`https://e-commerce-server-ioqu.onrender.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                 />
             </Box>
 

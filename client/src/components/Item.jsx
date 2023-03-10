@@ -38,7 +38,7 @@ const Item = ({item, width}) => {
                     alt={item.name}
                     width="300px"
                     height="400px"
-                    src={`https://e-commerce-server-ioqu.onrender.com${url}`} 
+                    src={`${url}`} 
                     onClick={() => navigate(`/item/${item.id}`)}
                     style={{ cursor: 'pointer' }}
                 />
