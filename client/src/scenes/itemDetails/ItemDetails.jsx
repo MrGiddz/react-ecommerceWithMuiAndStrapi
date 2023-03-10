@@ -56,7 +56,7 @@ const ItemDetails = () => {
                     alt={item?.name}
                     width="100%"
                     height="100%"
-                    src={`https://e-commerce-server-ioqu.onrender.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                    src={`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                 />
             </Box>
 
@@ -89,6 +89,7 @@ const ItemDetails = () => {
                             <RemoveIcon />
                         </IconButton>
                         <Typography sx={{ p: "0 5px" }}>{count}</Typography>
+                        
                         <IconButton onClick={() => setCount(Math.max(count + 1))}>
                             <AddIcon />
                         </IconButton>

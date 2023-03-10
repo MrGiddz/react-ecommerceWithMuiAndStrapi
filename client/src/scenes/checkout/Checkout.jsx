@@ -200,7 +200,6 @@ const Checkout = () => {
                                         padding: "15px 40px"
                                     }}
                                     onClick={() => {
-                                        console.log(activeStep)
                                         setActiveStep(activeStep - 1)
                                     }}
                                 >Back</Button>

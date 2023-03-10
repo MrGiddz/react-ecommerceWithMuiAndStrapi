@@ -11,8 +11,6 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
     async create(ctx){
         const { products, userName, email } = ctx.request.body;
         
-        console.log(ctx.request.body)
-
         try {
             // retrieve item information
             const lineItems = await Promise.all(
@@ -20,8 +18,6 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
                     const item = await strapi
                         .service("api::item.item")
                         .findOne(product.id);
-
-                        console.log({item})
                         return {
                             price_data: {
                                 currency: "usd",

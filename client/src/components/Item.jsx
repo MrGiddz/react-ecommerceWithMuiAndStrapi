@@ -57,11 +57,14 @@ const Item = ({item, width}) => {
                             backgroundColor={shades.neutral[100]}
                             borderRadius="3px"
                         >
-                            <IconButton onClick={() => dispatch(setCount(Math.max(count -1, 1)))}>
+                            <IconButton onClick={() => (setCount(Math.max(count -1, 1)))}>
                                 <RemoveIcon />
                             </IconButton>
-                            <Typography color={shades.primary[300]}>{item.count}</Typography>
-                            <IconButton onClick={() => dispatch(setCount(count + 1))}>
+                            <Typography color={shades.primary[300]}>{count}</Typography>
+                            <IconButton onClick={() => {
+                                (setCount(count + 1))
+                             }
+                            }>
                                 <AddIcon />
                             </IconButton>
                         </Box>

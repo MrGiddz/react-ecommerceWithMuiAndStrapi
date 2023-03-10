@@ -13,11 +13,6 @@ const AddressForm = ({
     const isNonMobile = useMediaQuery("(min-width:600px)");
 
 
-
-    useEffect(() => {
-        console.log(values)
-    }, [values])
-
     // these functions allow for better code readability
     const formattedName = (field) => `${type}.${field}`;
 
