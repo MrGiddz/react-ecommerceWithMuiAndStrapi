@@ -9,10 +9,10 @@ module.exports = [
           'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          upgradeInsecureRequests: null
-        }
-      }
-    }
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
   },
   'strapi::cors',
   'strapi::poweredBy',
